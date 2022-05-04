@@ -8,4 +8,4 @@ def check_codeword(codeword)
   end
 end
 
-# This
+# This is a good habit 
