@@ -1,25 +1,26 @@
 
-require 'check_codeword'
 
-RSpec.describe 'Check_codeword method' do
-  context 'When you enter the correct password' do
-    it 'tell the user correct! Come in.' do
+require "check_codeword"
+
+RSpec.describe "check_codeword" do
+  context "when you enter the right codeword" do
+    it "returns the message saying Correct! Come in." do
       result = check_codeword("horse")
-      expect(result).to eq 'Correct! Come in.'
+      expect(result).to eq "Correct! Come in."
     end
   end
 
-  context 'When you enter a password starting with h and ending with e' do
-    it 'reters a messahe close but not nope' do
-      result = check_codeword('home')
-      expect(result).to eq 'Close, but nope.'
+  context "when you enter first letter as h and last letter as e" do
+    it "returns the message saying Close, but nope." do
+      result = check_codeword("home")
+      expect(result).to eq "Close, but nope."
     end
   end
-
-  context 'when the code word is incorrect' do
-    it 'returns the message wrong' do
-      result = check_codeword('time')
-      expect(result).to eq 'WRONG!'
+  
+  context "when the user enters the wrong codeword" do
+    it "returns the message saying WRONG!" do
+      result = check_codeword("terminal") 
+      expect(result).to eq ("WRONG!")
     end
   end
 

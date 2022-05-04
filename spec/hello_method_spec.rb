@@ -1,9 +1,11 @@
 
-require 'hello_method'
+require "hello_method"
 
-RSpec.describe 'Hello method' do
-  it 'adds hello to a name and returns it' do
-    result = hello_method("dom")
-    expect(result).to eq "Hello, dom!"
+RSpec.describe "Hello method" do
+  it "adds hello to a name and returns it" do
+    result = hello_method("kam")
+    expect(result).to eq "Hello, kam!"
   end
 end
+
+
